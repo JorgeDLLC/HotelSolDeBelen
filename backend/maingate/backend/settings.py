@@ -26,7 +26,7 @@ SECRET_KEY = os.getenv('DJANGO_SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.getenv('DEBUG', 'False') == 'True'
 
-ALLOWED_HOSTS = ['jorgedlcdemotesting.online', 'www.jorgedlcdemotesting.online', '161.132.45.122']
+ALLOWED_HOSTS = ['hotelsoldebelen.com', 'www.hotelsoldebelen.com', '161.132.54.79']
 
 
 # Application definition
@@ -123,8 +123,8 @@ STATIC_URL = 'static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 CORS_ALLOWED_ORIGINS = [
-    "https://jorgedlcdemotesting.online",
-    "https://www.jorgedlcdemotesting.online",
+    "https://hotelsoldebelen.com",
+    "https://www.hotelsoldebelen.com",
 ]
 
 
