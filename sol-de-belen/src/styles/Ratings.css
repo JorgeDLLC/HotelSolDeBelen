@@ -1,0 +1,59 @@
+/* --- RATINGS --- */
+.ratings-section{
+  text-align: center;
+}
+
+.ratings-title{
+  font-size: clamp(1.6rem, 2.5vw, 2.2rem);
+  margin-bottom: 28px;
+  font-weight: 500;
+}
+
+.ratings-row{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 48px;
+  flex-wrap: wrap;
+}
+
+.rating-card{
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  min-width: 240px;
+}
+
+.rating-logo{
+  width: 42px;
+  height: auto;
+}
+
+.rating-score{
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 1.05rem;
+}
+
+.rating-star{
+  color: #f5c06b; /* dorado suave */
+}
+
+.rating-label{
+  color: #8bd28b;
+  font-size: 0.95rem;
+}
+
+.rating-reviews{
+  font-size: 0.85rem;
+  opacity: 0.75;
+  margin: 2px 0 0 0;
+}
+
+/* Responsive */
+@media (max-width: 720px){
+  .ratings-row{
+    gap: 28px;
+  }
+}

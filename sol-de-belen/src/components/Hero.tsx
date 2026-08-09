@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import heroImg from "../assets/images/hero.png";
 import LOGOHSDB from "../assets/images/logo-hsdb.png";
 import { motion } from "framer-motion";
-
+import "../styles/Hero.css";
 const phrases = [
   { line1: "UN HOGAR", line2: "LEJOS DE CASA" },
   { line1: "UN SERVICIO EN LA ALTURA", line2: "A TU ALTURA" },

@@ -1,0 +1,147 @@
+/* src/components/Habitaciones/Habitaciones.css */
+
+.rooms-section {
+  position: relative;
+  overflow: hidden;
+}
+
+.room-split-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  align-items: center;
+  position: relative;
+  background-color: rgb(241, 235, 227);
+  border-radius: 10px;
+}
+
+.room-split-layout{
+  margin-top: 25px;
+}
+
+/* Columna Izquierda (Imagen) */
+.room-image-block {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1/1; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.room-image-frame {
+  position: absolute;
+  width: 60%;
+  height: 60%;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  z-index: 3;
+}
+
+.room-main-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.room-background-shape-1,
+.room-background-shape-2 {
+  position: absolute;
+  width: 20%;
+  height: 50%;
+  z-index: 1;
+}
+
+.room-background-shape-1 {
+  background-color: var(--shape-bg-1);
+  top: 17%;
+  left: 15%;
+}
+
+.room-background-shape-2 {
+  background-color: var(--shape-bg-2);
+  top: 33%;
+  right: 15%;
+  z-index: 2; 
+}
+
+/* Columna Derecha (Contenido) */
+.room-content-block {
+  display: flex;
+  margin: 50px;
+  flex-direction: column;
+  color: var(--text-dark);
+}
+
+.room-details-title {
+  margin: 0 0 24px ;
+  font-family: "Georgia", serif;
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  font-weight: 500;
+  color: var(--title-color);
+  line-height: 1.1;
+}
+
+.room-details-description {
+  margin: 0 0 32px;
+  font-size: clamp(0.95rem, 1.2vw, 1.1rem);
+  line-height: 1.6;
+  opacity: 0.9;
+  max-width: 55ch; 
+}
+
+.room-details-divider {
+  width: 90%;
+  height: 1px;
+  background-color: var(--title-color);
+  margin-bottom: 32px;
+}
+
+.room-details-button {
+  display: inline-block;
+  align-self: flex-start;
+  padding: 14px 48px;
+  background-color: var(--button-color);
+  color: white;
+  text-decoration: none;
+  font-family: "Arial", sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border-radius: 999px; 
+  transition: transform 160ms ease, background-color 160ms ease;
+  cursor: pointer;
+}
+
+.room-details-button:hover {
+  transform: translateY(-2px);
+  background-color: #a88a6d; 
+}
+
+/* RESPONSIVE para habitaciones */
+@media (max-width: 1024px){
+  .room-split-layout{
+    grid-template-columns: 1fr;
+    gap: 5px;
+    text-align: center;
+  }
+  .room-details-button,.room-details-description, .room-details-title {
+    align-self: center; 
+  }
+  .room-image-block {
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 640px){
+  .rooms-section{ padding: 36px 28px; }
+  .room-split-layout { margin-top: 32px; }
+  .room-details-title{ font-size: 2.2rem; }
+  .room-details-description{ font-size: 0.9rem; }
+  .room-image-block { width: 100%; }
+}

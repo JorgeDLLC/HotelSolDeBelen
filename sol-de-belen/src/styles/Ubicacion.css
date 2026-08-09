@@ -1,0 +1,92 @@
+/* =========================
+   COMPONENTE UBICACIÓN
+   ========================= */
+.ubicacion-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  color: #333;
+  font-family: "Arial", sans-serif; /* Letra más limpia para listas/mapas */
+}
+
+.ubicacion-title {
+  margin: 0;
+  font-size: 1.25rem;
+  color: black; /* Usando tu variable de tema */
+  font-family: "Georgia", serif;
+}
+
+.map-wrapper {
+  width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.map-wrapper iframe {
+  display: block;
+  width: 100%;
+  height: 250px;
+}
+
+.nearby-title {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 10px 0 5px;
+}
+
+.nearby-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.nearby-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.95rem;
+  border-bottom: 1px solid #eaeaea;
+  padding-bottom: 8px;
+}
+
+.nearby-item-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.nearby-icon {
+  color: #555;
+  display: flex;
+}
+
+.nearby-distance {
+  color: #777;
+  text-align: right;
+  min-width: 110px;
+}
+
+/* Responsive del bloque dividido */
+@media (max-width: 1024px) {
+  .location-features-section {
+    grid-template-columns: 1fr; /* Una columna debajo de la otra en tablets/móviles */
+    gap: 48px;
+  }
+}
+
+@media (max-width: 640px) {
+  .container-ubicacion-features{
+  background-color: var(--panel);
+  padding: 15vw 5vw 0; /* espacio extra arriba para que el hero no se pegue */
+  }
+  .location-features-section .features {
+    grid-template-columns: 1fr; /* Vuelve a 1 columna en celulares */
+  }
+  .nearby-item {
+  font-size: 0.7rem;
+  }
+}

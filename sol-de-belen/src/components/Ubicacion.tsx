@@ -1,5 +1,5 @@
 import React from 'react';
-
+import "../styles/Ubicacion.css";
 // Ícono genérico de marcador (Solid Pin)
 function IconSolidPin() {
   return (

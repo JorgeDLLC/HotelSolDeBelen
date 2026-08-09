@@ -1,3 +1,5 @@
+import React from "react";
+import "../styles/Features.css";
 type Feature = {
   icon: React.ReactNode;
   title: string;

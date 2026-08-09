@@ -1,6 +1,6 @@
 import booking from "../assets/images/logo-booking.png";
 import tripadvisor from "../assets/images/logo-tripadvisor.png";
-
+import "../styles/Ratings.css";
 type Rating = {
   logo: string;
   score: string;

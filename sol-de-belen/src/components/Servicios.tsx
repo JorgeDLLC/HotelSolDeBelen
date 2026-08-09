@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import restaurante from "../assets/images/servicio-restaurante.png";
 import auditorio from "../assets/images/servicio-auditorio.png";
 import alojamiento from "../assets/images/servicio-alojamiento.jpg";
-
+import "../styles/Servicios.css";
 const servicios = [
   {
     title: "Restaurantes",

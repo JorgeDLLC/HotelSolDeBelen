@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from "react";
-
+import "../styles/CloudbedsWidget.css";
 const CLOUDBEDS_PROPERTY_CODE = "xFTHFv"; // tu code
 
 function toISODate(d: Date) {

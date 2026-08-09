@@ -1,0 +1,115 @@
+/* =========================
+   CLOUDBEDS - BAR (entre Hero y Features)
+   ========================= */
+
+/* Contenedor flotante centrado */
+.cloudbeds-bar{
+  position: absolute;
+  left: 50%;
+  bottom: -34px;                 /* para que “salga” del hero y se meta al panel de abajo */
+  transform: translateX(-50%);
+  z-index: 6;
+  width: min(920px, calc(100% - 56px));
+  pointer-events: none;          /* el wrapper no, solo el inner */
+}
+
+/* Caja gris grande como el mockup */
+.cloudbeds-bar-inner{
+  pointer-events: auto;
+  background: #d9d6d2;
+  border-radius: 16px;
+  padding: 14px 16px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1.1fr;
+  gap: 14px;
+  align-items: center;
+  box-shadow: 0 10px 24px rgba(0,0,0,0.18);
+}
+
+/* Inputs con estilo “beige” */
+.cloudbeds-input{
+  width: 100%;
+  height: 44px;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  background: #c7ab8c;
+  color: #fff;
+  font-family: "Arial", serif;
+  font-weight: 600;
+  letter-spacing: .04em;
+  padding: 0 14px;
+}
+
+/* placeholder/íconos del date input en navegadores */
+.cloudbeds-input::-webkit-calendar-picker-indicator{
+  opacity: 0.9;
+  filter: invert(1);
+  cursor: pointer;
+}
+
+/* Botón Reservar */
+.cloudbeds-btn{
+  height: 44px;
+  border: none;
+  border-radius: 10px;
+  background: #c7ab8c;
+  color: #fff;
+  font-family: "Arial", serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  cursor: pointer;
+  transition: transform 160ms ease, opacity 160ms ease;
+}
+
+.cloudbeds-btn:hover{
+  transform: translateY(-1px);
+  opacity: 0.95;
+}
+
+/* Accesibilidad */
+.cloudbeds-sr-only{
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  border: 0;
+}
+
+/* Permite que el widget sobresalga del hero */
+.panel:first-of-type{
+  overflow: visible;
+  z-index: 2;
+}
+
+/* Features queda por debajo */
+.panel:nth-of-type(2){
+  position: relative;
+  z-index: 1;
+}
+
+/* Oculta la barra flotante original de Cloudbeds */
+#cloudbeds-widget,
+.cloudbeds-widget,
+.cb-widget,
+iframe[src*="cloudbeds"]{
+  display: none !important;
+}
+
+/* Responsive */
+@media (max-width: 720px){
+  .cloudbeds-bar{
+    bottom: -44px;
+    width: min(520px, calc(100% - 28px));
+  }
+
+  .cloudbeds-bar-inner{
+    grid-template-columns: 1fr;
+    gap: 10px;
+    padding: 12px;
+  }
+}

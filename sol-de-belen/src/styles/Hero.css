@@ -1,0 +1,65 @@
+/*-------------------------------------------------------------------------*/
+/* HERO */
+/*-------------------------------------------------------------------------*/
+
+.hero{
+  height:  100vh;                 /* ajusta si lo quieres más alto*/
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* oscurecer como en la imagen */
+.hero-shade{
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.452);
+  z-index: 1;
+}
+
+/* contenedor de texto */
+.hero-inner{
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  padding: 28px 56px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Imagen centrada */
+.hero-logo-container {
+  flex-grow: 1;         /* Empuja al tagline hacia abajo y toma el centro */
+  display: flex;
+  align-items: center;  /* Centrado vertical */
+  justify-content: center; /* Centrado horizontal */
+  width: 100%;
+}
+
+/* Imagen del logo responsive */
+.hero-logo-img {
+  width: 100%;
+  max-width: 700px;     /* Tamaño máximo en pantallas grandes */
+  height: auto;         /* Mantiene proporción */
+  object-fit: contain;
+  filter: invert(1) brightness(100);
+}
+
+/* texto inferior izquierdo */
+.hero-tagline{
+  margin-top: auto;
+  padding-bottom: 18px;
+}
+
+.hero-tagline p{
+  margin: 0;
+  font-family: "Georgia", serif;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: normal;
+  color: #fff;
+  font-size: clamp(1.4rem, 2.2vw, 2.2rem);
+  line-height: 1.15;
+}
+
+.hero-panel{ position: relative; }

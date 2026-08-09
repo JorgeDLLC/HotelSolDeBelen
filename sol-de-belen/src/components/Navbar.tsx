@@ -1,4 +1,5 @@
 import { FaFacebook, FaWhatsapp, FaInstagram } from 'react-icons/fa';
+import "../styles/Navbar.css";
 export default function Navbar() {
 
   return (

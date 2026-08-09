@@ -1,6 +1,6 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-
+import "../styles/Reveal.css";
 type Props = {
   children: React.ReactNode;
   y?: number;

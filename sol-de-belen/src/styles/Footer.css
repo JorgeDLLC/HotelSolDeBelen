@@ -1,0 +1,14 @@
+.footer{
+  padding: 26px;
+  text-align: center;
+  opacity: .9;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px){
+  .cards{ grid-template-columns: 1fr; }
+  .room{ grid-template-columns: 1fr; }
+  .hero{ height: 420px; }
+  .section{ padding: 36px; }
+  .hero-overlay{ padding: 36px; }
+}
