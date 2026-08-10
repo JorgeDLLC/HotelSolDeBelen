@@ -28,6 +28,8 @@
 
 /* Inputs con estilo “beige” */
 .cloudbeds-input{
+  -webkit-appearance: none;
+  appearance: none;
   width: 100%;
   height: 44px;
   border: none;
@@ -39,6 +41,8 @@
   font-weight: 600;
   letter-spacing: .04em;
   padding: 0 14px;
+  box-sizing: border-box;   /* clave: evita que el padding sume ancho extra y desborde el grid */
+  min-width: 0;             /* evita que Safari le dé un ancho mínimo propio dentro del grid */
 }
 
 /* placeholder/íconos del date input en navegadores */
@@ -103,7 +107,7 @@ iframe[src*="cloudbeds"]{
 /* Responsive */
 @media (max-width: 720px){
   .cloudbeds-bar{
-    bottom: -44px;
+    bottom: 0px;
     width: min(520px, calc(100% - 28px));
   }
 

@@ -8,7 +8,7 @@ import matrimonial2 from "../assets/images/Matrimonial2.png";
 import matrimonial3 from "../assets/images/Matrimonial3.png";
 
 // Suite Familiar
-import suitefamiliar1 from "../assets/images/Familiar1.png";
+// import suitefamiliar1 from "../assets/images/Familiar1.png";
 import suitefamiliar2 from "../assets/images/Familiar2.png";
 import suitefamiliar3 from "../assets/images/Familiar3.png";
 
@@ -53,7 +53,7 @@ const rooms: Room[] = [
   {
     title: "Suite Familiar",
     desc: "Amplitud y comodidad pensadas para compartir. Espacios independientes, ambientes cálidos y todo lo necesario para que cada integrante de la familia tenga su propio rincón sin perder la cercanía. Ideal para estadías largas donde el confort no se negocia y cada día se siente como en casa.",
-    images: [suitefamiliar1, suitefamiliar2, suitefamiliar3],
+    images: [suitefamiliar2, suitefamiliar3],
     href: RESERVA_URL,
   },
   // {
